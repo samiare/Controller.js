@@ -1,0 +1,284 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+
+    color: #000000;
+    background-color: #ffffff;
+
+    &[data-supported='true'] {
+
+        #instructions.hidden {
+            display: none;
+        }
+
+        #unsupported {
+            display: none;
+        }
+
+    }
+
+    &[data-supported='false'] {
+
+        #instructions {
+            display: none;
+        }
+
+    }
+
+}
+
+::selection {
+    background-color: #8cffd8;
+}
+
+strong {
+    font-weight: 400;
+}
+
+.padded {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:not(.button) {
+        border-bottom: 1px solid #8cffd8;
+        padding-bottom: 3px;
+
+        &:hover {
+            border-bottom-color: #666666;
+        }
+    }
+}
+
+a.button {
+    display: inline-block;
+    height: 30px;
+
+    margin: 0px 0px 30px;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #8cffd8;
+        color: #000000;
+    }
+}
+
+p {
+    margin: 0px;
+}
+
+main {
+
+    font: normal 300 12px/30px 'Roboto Mono', monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+
+    max-width: 740px;
+    margin: 0 auto;
+
+}
+
+.controller {
+
+    width: 720px;
+    margin: 0px 10px;
+
+    opacity: 1;
+
+    overflow: auto;
+
+    transition: opacity 300ms linear;
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    > h1 {
+        font-weight: 100;
+        font-size: 24px;
+        line-height: 30px;
+        margin: 30px 0px;
+    }
+
+    .header {
+        font-weight: 700;
+    }
+
+}
+
+.controller > div {
+    width: 100%;
+    overflow: auto;
+    margin: 30px 0px;
+}
+
+.controller .row {
+
+    display: block;
+    width: 100%;
+    overflow: auto;
+
+    > div:not(.analog-vis) {
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        mix-blend-mode: multiply;
+    }
+
+}
+
+.controller .sticks {
+
+    float: left;
+    width: 50%;
+
+}
+
+.controller .buttons {
+
+    .row > div:nth-child(n + 2) {
+        width: 25%;
+    }
+
+    .row:not(.header):nth-child(even) {
+        background-color: #f7f7f7;
+    }
+
+}
+
+.analog-vis {
+
+    margin: 5px 0px;
+
+    width: 120px;
+    height: 120px;
+    background: transparent url(../images/vis_bg.png) no-repeat 0px 0px;
+    background-size: 360px 120px;
+    position: relative;
+
+    &.none {
+        background-position-x: 0px
+    }
+
+    &.circle {
+        background-position-x: -120px
+    }
+
+    &.square {
+        background-position-x: -240px
+    }
+
+    > div {
+
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+
+        margin-left: -15px;
+        margin-top: -15px;
+
+        background-color: #666666;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+    }
+
+}
+
+
+body > header {
+
+    font: normal 300 12px/30px 'Roboto Mono', monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+
+    max-width: 720px;
+    margin: 0px auto;
+    padding: 30px 10px 60px;
+
+    > * {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-weight: 100;
+        font-size: 36px;
+        line-height: 60px;
+        margin-bottom: 30px;
+
+        display: inline-block;
+
+        background-color: #8cffd8;
+    }
+
+    h2 {
+        width: 75%;
+        margin: 0px;
+
+        font-weight: 100;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    ol,
+    #unsupported {
+        margin: 60px 0px 30px;
+    }
+
+    #unsupported .red {
+        color: #ff4b4b;
+        font-weight: 400;
+        letter-spacing: normal;
+    }
+
+}
+
+
+// Only visible on gh-pages version
+footer {
+
+    &.hidden-footer {
+        display: none;
+    }
+
+    font: normal 300 12px/30px 'Roboto Mono', monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0px 10px 60px;
+
+    > * {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+}
