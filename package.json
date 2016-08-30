@@ -1,0 +1,36 @@
+{
+  "name": "Controller.js",
+  "version": "1.0.0",
+  "description": "A library designed to make the Gamepad API easier to use for non-gaming applications.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samiare/Controller.js.git"
+  },
+  "keywords": [
+    "Gamepad",
+    "API",
+    "gamepad",
+    "controller"
+  ],
+  "author": "Samir Zahran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samiare/Controller.js/issues"
+  },
+  "homepage": "https://github.com/samiare/Controller.js#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.13.2",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-compress": "^1.3.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-shell": "^1.3.1",
+    "grunt-text-replace": "^0.4.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
