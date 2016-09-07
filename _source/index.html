@@ -63,7 +63,8 @@
         <footer class="visible-footer">
             <a href="http://github.com/samiare/Controller.js/releases/download/v{{version}}/Controller.js-{{version}}.zip"
                download="Controller.js-{{version}}.zip"
-               class="button">Download {{name}} (v{{version}})</a>
+               class="button"
+               onclick="ga('send', 'event', 'Download Button', 'Download', 'v{{version}}');">Download {{name}} (v{{version}})</a>
             <p>Read the <a href="http://github.com/samiare/Controller.js/wiki" target="_blank" rel="noopener noreferrer">documentation</a>.</p>
             <p>Check out the source on <a href="http://github.com/samiare/Controller.js" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
             <p><strong>Controller.js</strong> was made by <a href="http://twitter.com/SamIAre" target="_blank" rel="noopener noreferrer">Samir Zahran</a> at <a href="http://thisalso.com" target="_blank" rel="noopener noreferrer">This Also</a>.</p>
@@ -73,6 +74,16 @@
         <script src="js/Controller.js"></script>
         <script src="js/Controller.layouts.js"></script>
         <script src="js/main.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-44985374-5', 'auto');
+            ga('send', 'pageview');
+        </script>
 
     </body>
 </html>
