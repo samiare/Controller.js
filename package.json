@@ -1,6 +1,6 @@
 {
   "name": "Controller.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library designed to make the Gamepad API easier to use for non-gaming applications.",
   "repository": {
     "type": "git",
