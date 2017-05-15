@@ -1,6 +1,6 @@
 "use strict";
 
-/*! Controller.layouts.js - v1.0.0 - 2016-08-30 */
+/*! Controller.layouts.js - v1.0.1 - 2017-05-15 */
 (function () {
     var xboxOneOSX = {
         match: "Xbox One Wired Controller",
