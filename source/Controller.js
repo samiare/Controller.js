@@ -1053,7 +1053,7 @@ Controller.search = function(options) {
                 return;
             }
 
-            if (this.gamepads[index] !== undefined && this.getController(index) === undefined) {
+            if (this.gamepads[index] !== undefined && this.gamepads[index] !== null && this.getController(index) === undefined) {
 
                 if (!this.controllers) {
                     this.controllers = {};
