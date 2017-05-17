@@ -146,12 +146,12 @@ function Controller(HTMLgamepad) {
         let layout = {};
 
         // Get the correct mapping layout, if available
-        if (gamepad.mapping === 'standard') {
-            unknownLayout = false;
-            layout = this.constructor.layouts.get('standard');
-        } else if (this.constructor.layouts.has(this.name)) {
+        if (this.constructor.layouts.has(this.name)) {
             unknownLayout = false;
             layout = this.constructor.layouts.get(this.name);
+        } else if (gamepad.mapping === 'standard') {
+            unknownLayout = false;
+            layout = this.constructor.layouts.get('standard');
         } else {
             console.warn(GC_Errors.MAP);
             layout = this.constructor.layouts.get('_unknown');
