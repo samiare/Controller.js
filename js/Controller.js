@@ -2,7 +2,7 @@
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-/*! Controller.js - v1.0.1 - 2017-05-15 */
+/*! Controller.js - v1.0.2 - 2017-05-17 */
 function Controller(HTMLgamepad) {
     "use strict";
 
@@ -85,12 +85,12 @@ function Controller(HTMLgamepad) {
     }
     function initControllerMapping() {
         var layout = {};
-        if (gamepad.mapping === "standard") {
-            unknownLayout = false;
-            layout = this.constructor.layouts.get("standard");
-        } else if (this.constructor.layouts.has(this.name)) {
+        if (this.constructor.layouts.has(this.name)) {
             unknownLayout = false;
             layout = this.constructor.layouts.get(this.name);
+        } else if (gamepad.mapping === "standard") {
+            unknownLayout = false;
+            layout = this.constructor.layouts.get("standard");
         } else {
             console.warn(GC_Errors.MAP);
             layout = this.constructor.layouts.get("_unknown");
