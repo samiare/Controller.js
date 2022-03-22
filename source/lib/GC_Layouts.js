@@ -31,6 +31,7 @@ const GC_Layouts = {
     },
 
     has: function(name) {
+        if (!name) return false;
         name = name.toLowerCase();
         return name in Controller.layouts.list;
     },
